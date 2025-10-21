@@ -1,0 +1,31 @@
+// src/server/provider.ts
+import "dotenv/config";
+
+const API_KEY = process.env.THESYS_API_KEY;
+if (!API_KEY) throw new Error("Missing THESYS_API_KEY");
+
+export const provider = {
+  name: "thesys",
+  apiKey: API_KEY,
+  model: process.env.DEFAULT_MODEL || "THESYS",
+};
+// src/server/provider.ts
+import "dotenv/config";
+
+const API_KEY = process.env.THESYS_API_KEY;
+if (!API_KEY) throw new Error("Missing THESYS_API_KEY");
+
+export const provider = {
+  name: "thesys",
+  apiKey: API_KEY,
+  model: process.env.DEFAULT_MODEL || "THESYS",
+};// src/config/models.ts
+export const MODELS = [
+  {
+    id: "THESYS",
+    label: "THESYS",
+    provider: "thesys",
+  },
+];
+
+export const DEFAULT_MODEL = "THESYS";
